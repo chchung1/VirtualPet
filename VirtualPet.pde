@@ -21,13 +21,19 @@ void draw()
   ellipse(500,300,315,300); //head
   ellipse(500,550,350,400); //body
  
+  //eyebrows
+  fill(255,255,255);
+  rect(400,250,35,20);
+  rect(565,250,35,20);
   //eyes
   fill(179,223,216);
   ellipse(420,300,20,20);
   ellipse(580,300,20,20);
   //nose
   fill(245,185,168);
-  triangle(500,330,490,320,510,320);
-  
+  triangle(500,330,490,310,510,310);
+  //mouth
+  stroke(1);
+  line(500,330,500,350);
  
 }
