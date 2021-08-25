@@ -1,13 +1,22 @@
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+
 void setup()
 {
   size(1000,1000);
+  arduino = new Arduino(this, Arduino.list()[0], 57600);
 }
 
 void draw()
 {
+  background(192);
+  int y = arduino.analogRead(5);
+  System.out.println(y);
+  
   noStroke();
   //ears
-  fill(255,255,255);
+  fill(100+2*y,y,255);
   triangle(400,120,380,200,460,180);
   triangle(600,120,620,200,540,180);
   //legs
@@ -22,10 +31,10 @@ void draw()
   ellipse(500,550,350,400); //body
  
   //eyebrows
-  fill(255,255,255);
+  fill(100+y,240+2*y,y);
   rect(400,250,35,20);
   rect(565,250,35,20);
-  //eyes
+  //eyes - original eye color: 179, 223, 216
   fill(179,223,216);
   ellipse(420,300,20,20);
   ellipse(580,300,20,20);
@@ -35,5 +44,5 @@ void draw()
   //mouth
   stroke(1);
   line(500,330,500,350);
- 
+  
 }
