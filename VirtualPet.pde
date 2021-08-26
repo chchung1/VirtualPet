@@ -1,7 +1,3 @@
-import processing.serial.*;
-import cc.arduino.*;
-Arduino arduino;
-
 void setup()
 {
   size(1000,1000);
@@ -17,11 +13,11 @@ void draw()
   noStroke();
   fill(21+y,250,255);
   //ears
-  triangle(400,120,380,200,460,180);
-  triangle(600,120,620,200,540,180);
+  triangle(400,120-y,380,200,460,180);
+  triangle(600,120-y,620,200,540,180);
   //legs
-  ellipse(460,750,50,80);
-  ellipse(540,750,50,80);
+  ellipse(460,750,50,80+y);
+  ellipse(540,750,50,80+y);
   //arms
   ellipse(690,490,80,50);
   ellipse(310,490,80,50);
@@ -46,4 +42,3 @@ void draw()
   line(500,330,500,350);
   
 }
-
