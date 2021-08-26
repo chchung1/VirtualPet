@@ -15,8 +15,8 @@ void draw()
   System.out.println(y);
   
   noStroke();
+  fill(21+y,250,255);
   //ears
-  fill(100+2*y,y,255);
   triangle(400,120,380,200,460,180);
   triangle(600,120,620,200,540,180);
   //legs
@@ -31,7 +31,7 @@ void draw()
   ellipse(500,550,350,400); //body
  
   //eyebrows
-  fill(100+y,240+2*y,y);
+  fill(255,255,255);
   rect(400,250,35,20);
   rect(565,250,35,20);
   //eyes - original eye color: 179, 223, 216
@@ -46,3 +46,4 @@ void draw()
   line(500,330,500,350);
   
 }
+
