@@ -1,23 +1,20 @@
 void setup()
 {
   size(1000,1000);
-  arduino = new Arduino(this, Arduino.list()[0], 57600);
+
 }
 
 void draw()
 {
-  background(192);
-  int y = arduino.analogRead(5);
-  System.out.println(y);
   
   noStroke();
-  fill(21+y,250,255);
+  fill(21,250,255);
   //ears
-  triangle(400,120-y,380,200,460,180);
-  triangle(600,120-y,620,200,540,180);
+  triangle(400,120,380,200,460,180);
+  triangle(600,120,620,200,540,180);
   //legs
-  ellipse(460,750,50,80+y);
-  ellipse(540,750,50,80+y);
+  ellipse(460,750,50,80);
+  ellipse(540,750,50,80);
   //arms
   ellipse(690,490,80,50);
   ellipse(310,490,80,50);
