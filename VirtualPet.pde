@@ -8,7 +8,7 @@ void draw()
 {
   
   noStroke();
-  fill(21,250,255);
+  fill(255,255,255);
   //ears
   triangle(400,120,380,200,460,180);
   triangle(600,120,620,200,540,180);
